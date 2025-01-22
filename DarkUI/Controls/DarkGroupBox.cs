@@ -12,6 +12,7 @@ namespace DarkUI.Controls
 
         [Category("Appearance")]
         [Description("Determines the color of the border.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BorderColor
         {
             get { return _borderColor; }

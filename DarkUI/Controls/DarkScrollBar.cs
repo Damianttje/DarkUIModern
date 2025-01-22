@@ -1,5 +1,4 @@
 ﻿using DarkUI.Config;
-using DarkUI.Icons;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -129,6 +128,7 @@ namespace DarkUI.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new bool Visible
         {
             get { return base.Visible; }

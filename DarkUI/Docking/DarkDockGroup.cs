@@ -1,4 +1,5 @@
 ﻿using DarkUI.Config;
+using DarkUI.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,15 +25,15 @@ namespace DarkUI.Docking
         #endregion
 
         #region Property Region
-
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public DarkDockPanel DockPanel { get; private set; }
-
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public DarkDockRegion DockRegion { get; private set; }
-
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public DarkDockArea DockArea { get; private set; }
-
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public DarkDockContent VisibleContent { get; private set; }
-
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int Order { get; set; }
 
         public int ContentCount { get { return _contents.Count; } }
@@ -400,6 +401,10 @@ namespace DarkUI.Docking
             UpdateTabArea();
         }
 
+        /// <summary>
+        /// Handle mouse movement to determine if a tab is being dragged.
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
@@ -439,7 +444,7 @@ namespace DarkUI.Docking
                     if (_dragTab.DockContent.Order < maxOrder)
                     {
                         var otherTabs = _tabs.Values.Where(t => t.DockContent.Order == _dragTab.DockContent.Order + 1).ToList();
-                        if(otherTabs.Count == 0)
+                        if (otherTabs.Count == 0)
                             return;
 
                         var otherTab = otherTabs.First();
@@ -458,6 +463,14 @@ namespace DarkUI.Docking
 
                         return;
                     }
+                }
+
+                // Trigger when the tab is being dragged outside the bounds of the tab group
+                var point = Cursor.Position;
+                if (point.X < 0 || point.X > ClientRectangle.Width || point.Y < 0 || point.Y > ClientRectangle.Height)
+                {
+                    // Handle the tab being dragged outside the bounds
+                    DockPanel.DragContent(_dragTab.DockContent);
                 }
 
                 return;
@@ -531,6 +544,7 @@ namespace DarkUI.Docking
                         EnsureVisible();
 
                         _dragTab = tab;
+                        Capture = true;
    
                         return;
                     }
@@ -546,6 +560,7 @@ namespace DarkUI.Docking
             base.OnMouseUp(e);
 
             _dragTab = null;
+            Capture = false;
 
             if (_tabArea.DropdownRectangle.Contains(e.Location))
             {

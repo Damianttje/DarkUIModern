@@ -1,0 +1,40 @@
+﻿using DarkUI.Docking;
+using System.Windows.Forms;
+
+namespace DarkUI.Forms
+{
+    public partial class DarkHostForm : DarkForm
+    {
+        public bool HasContent => dockPanel.Contents.Count > 0;
+        public DarkDockPanel DockPanel => dockPanel;
+
+        public DarkHostForm()
+        {
+            InitializeComponent();
+
+            Application.AddMessageFilter(dockPanel.DockContentDragFilter);
+        }
+
+        private void DockPanel_ContentRemoved(object sender, DockContentEventArgs e)
+        {
+            if (!HasContent)
+            {
+                DockDocumentManager.FormClosed(this);
+                Close();
+            }
+        }
+
+        private void DarkHostForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (HasContent)
+            {
+                var result = DarkMessageBox.ShowWarning("Close all documents?", "Attention", DarkDialogButton.YesNo);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+        }
+    }
+}

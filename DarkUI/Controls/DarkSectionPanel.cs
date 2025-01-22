@@ -24,6 +24,7 @@ namespace DarkUI.Controls
 
         [Category("Appearance")]
         [Description("The section header text associated with this control.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string SectionHeader
         {
             get { return _sectionHeader; }

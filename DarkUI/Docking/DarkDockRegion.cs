@@ -21,9 +21,9 @@ namespace DarkUI.Docking
         #endregion
 
         #region Property Region
-
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public DarkDockPanel DockPanel { get; private set; }
-
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public DarkDockArea DockArea { get; private set; }
 
         public DarkDockContent ActiveDocument

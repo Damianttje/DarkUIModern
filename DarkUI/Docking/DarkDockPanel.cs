@@ -30,6 +30,16 @@ namespace DarkUI.Docking
 
         #region Property Region
 
+        public List<DarkDockContent> Contents
+        {
+            get { return _contents; }
+        }
+
+        [Category("Appearance")]
+        [Description("Determines the text that will appear in the host form title bar.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string HostFormText { get; set; }
+
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public DarkDockContent ActiveContent
@@ -125,6 +135,7 @@ namespace DarkUI.Docking
             BackColor = Colors.GreyBackground;
 
             CreateRegions();
+            DockDocumentManager.AddHost(this);
         }
 
         #endregion

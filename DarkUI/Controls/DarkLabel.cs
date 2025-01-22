@@ -35,6 +35,7 @@ namespace DarkUI.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new bool AutoSize
         {
             get { return base.AutoSize; }

@@ -84,6 +84,17 @@ namespace DarkUI.Win32
                             break;
                     }                        
                 }
+                else
+                {
+                    if(_dragContent.DockArea == DarkDockArea.Document)
+                    {
+                        string hostTtitle = _dockPanel.HostFormText == string.Empty || _dockPanel.HostFormText == null ? _dockPanel.Parent?.Text ?? "Tab Host" : _dockPanel.HostFormText;
+
+                        _dockPanel.RemoveContent(_dragContent);
+                        DockDocumentManager.AddToHostForm(_dragContent, hostTtitle);
+                        DockDocumentManager.AddHost(_dockPanel);
+                    }
+                }
 
                 StopDrag();
                 return false;
