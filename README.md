@@ -23,6 +23,7 @@ Changes reflect my needs, don't expect them to make any sense.
 - This component replaced the default WinForms title bar (FormBorderStyle)
 - The new title bar has 3 states selectable from the properties window: None (create your own), Standard (title, close, maximize, minimize), ToolWindow (title, close)
 - If you choose to create your own TitleBar you can use the Drag event of the DarkForm to move the form using your custom title bar.
+- The title is changed using the forms Text property
 
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkDefaultTitleBarProperty.png" />
 
