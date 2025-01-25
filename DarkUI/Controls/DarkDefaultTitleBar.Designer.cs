@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DarkDefaultTitleBar));
             darkToolStrip1 = new DarkToolStrip();
             lbTitle = new System.Windows.Forms.ToolStripLabel();
             btnClose = new System.Windows.Forms.ToolStripButton();
@@ -63,7 +64,7 @@
             btnClose.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             btnClose.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
-            btnClose.Image = DarkUI.DockIcons.Close_vs;
+            btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
             btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             btnClose.Name = "btnClose";
             btnClose.Size = new System.Drawing.Size(23, 25);
@@ -75,11 +76,12 @@
             btnMaximize.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             btnMaximize.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             btnMaximize.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
-            btnMaximize.Image = DarkUI.DockIcons.PlanePreview;
+            btnMaximize.Image = (System.Drawing.Image)resources.GetObject("btnMaximize.Image");
             btnMaximize.ImageTransparentColor = System.Drawing.Color.Magenta;
             btnMaximize.Name = "btnMaximize";
             btnMaximize.Size = new System.Drawing.Size(23, 25);
             btnMaximize.Text = "toolStripButton2";
+            btnMaximize.Visible = false;
             // 
             // btnMinimize
             // 
@@ -87,11 +89,12 @@
             btnMinimize.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             btnMinimize.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             btnMinimize.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
-            btnMinimize.Image = DarkUI.DockIcons.RemoveNoColor;
+            btnMinimize.Image = (System.Drawing.Image)resources.GetObject("btnMinimize.Image");
             btnMinimize.ImageTransparentColor = System.Drawing.Color.Magenta;
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new System.Drawing.Size(23, 25);
             btnMinimize.Text = "toolStripButton3";
+            btnMinimize.Visible = false;
             // 
             // DarkDefaultTitleBar
             // 
@@ -101,6 +104,7 @@
             Controls.Add(darkToolStrip1);
             Name = "DarkDefaultTitleBar";
             Size = new System.Drawing.Size(729, 28);
+            Load += DarkDefaultTitleBar_Load;
             darkToolStrip1.ResumeLayout(false);
             darkToolStrip1.PerformLayout();
             ResumeLayout(false);

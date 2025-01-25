@@ -109,6 +109,8 @@ namespace Example
             btnClose.Click += Close_Click;
             btnMaximize.Click += Maximize_Click;
             btnMinimize.Click += Minimize_Click;
+
+            
         }
 
         private void ToggleToolWindow(DarkToolWindow toolWindow)

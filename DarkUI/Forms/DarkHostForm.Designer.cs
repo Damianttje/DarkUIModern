@@ -36,9 +36,9 @@
             dockPanel.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             dockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             dockPanel.HostFormText = null;
-            dockPanel.Location = new System.Drawing.Point(2, 30);
+            dockPanel.Location = new System.Drawing.Point(2, 58);
             dockPanel.Name = "dockPanel";
-            dockPanel.Size = new System.Drawing.Size(812, 457);
+            dockPanel.Size = new System.Drawing.Size(828, 468);
             dockPanel.TabIndex = 0;
             dockPanel.ContentRemoved += DockPanel_ContentRemoved;
             // 
@@ -46,12 +46,12 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(816, 489);
+            ClientSize = new System.Drawing.Size(832, 528);
             Controls.Add(dockPanel);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "DarkHostForm";
-            ShowDefaultTitleBar = true;
             Text = "DarkHostForm";
+            TitleBarStyle = DarkUI.Controls.DarkTitleBarStyle.ToolWindow;
             FormClosing += DarkHostForm_FormClosing;
             ResumeLayout(false);
         }

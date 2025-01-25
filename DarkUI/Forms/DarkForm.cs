@@ -13,11 +13,12 @@ namespace DarkUI.Forms
     {
         #region Field Region
 
-        private bool _flatBorder, _showDefaultTitleBar;
+        private bool _flatBorder;
         private const int _borderWidth = 2;
         private const int resizeAreaSize = 10;
         private Size _formSize;
         private DarkDefaultTitleBar _titleBar;
+        private DarkTitleBarStyle _titleBarStyle;
 
         [DllImport("user32.dll")]
         protected static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -42,15 +43,16 @@ namespace DarkUI.Forms
         }
 
         [Category("Appearance")]
-        [Description("Determines whether the default title bar should be rendered.")]
-        [DefaultValue(false)]
-        public bool ShowDefaultTitleBar
+        [Description("Sets the style of the Default TitleBar")]
+        [DefaultValue(DarkTitleBarStyle.Standard)]
+        public DarkTitleBarStyle TitleBarStyle
         {
-            get => _showDefaultTitleBar;
+            get => _titleBarStyle;
             set
             {
-                _showDefaultTitleBar = value;
-                AddTitleBar();
+                _titleBarStyle = value;
+                if(value != DarkTitleBarStyle.None)
+                    AddTitleBar();
 
                 Invalidate();
             }
@@ -135,7 +137,7 @@ namespace DarkUI.Forms
 
         public void AddTitleBar()
         {
-            _titleBar = new(this)
+            _titleBar = new(this, _titleBarStyle)
             {
                 Dock = DockStyle.Top
             };

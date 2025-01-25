@@ -1,5 +1,4 @@
 ﻿using DarkUI.Docking;
-using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace DarkUI.Forms
