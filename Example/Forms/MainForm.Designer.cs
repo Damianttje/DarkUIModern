@@ -369,7 +369,7 @@ namespace Example
             // 
             DockPanel.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             DockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            DockPanel.HostFormText = "MonoEdit";
+            DockPanel.HostFormText = "";
             DockPanel.Location = new System.Drawing.Point(2, 30);
             DockPanel.Name = "DockPanel";
             DockPanel.Size = new System.Drawing.Size(1228, 1164);

@@ -1,39 +1,56 @@
-﻿namespace DarkUI.Controls
-{
-    partial class DarkDefaultTitleBar
-    {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+﻿using DarkUI.Forms;
+using System;
+using System.Windows.Forms;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+namespace DarkUI.Controls
+{
+    public class DarkTitleBar : DarkToolStrip
+    {
+        #region Field Region
+        DarkForm _form;
+
+        private DarkToolStrip darkToolStrip1;
+        private ToolStripLabel lbTitle;
+        private ToolStripButton btnClose;
+        private ToolStripButton btnMaximize;
+        private ToolStripButton btnMinimize;
+        #endregion
+
+        public DarkTitleBar(DarkForm form, DarkTitleBarStyle titleBarStyle)
         {
-            if (disposing && (components != null))
+            _form = form;
+
+            darkToolStrip1 = this;
+
+            InitializeComponent();
+
+            form.Load += DarkDefaultTitleBar_Load;
+
+            darkToolStrip1.MouseDown += _form.Drag;
+            btnClose.Click += _form.Close_Click;
+
+            if (titleBarStyle == DarkTitleBarStyle.Standard)
             {
-                components.Dispose();
+                btnMaximize.Click += _form.Maximize_Click;
+                btnMaximize.Visible = true;
+
+                btnMinimize.Click += _form.Minimize_Click;
+                btnMinimize.Visible = true;
             }
-            base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        private void DarkDefaultTitleBar_Load(object sender, EventArgs e)
+        {
+            lbTitle.Text = _form.Text;
+        }
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DarkDefaultTitleBar));
-            darkToolStrip1 = new DarkToolStrip();
-            lbTitle = new System.Windows.Forms.ToolStripLabel();
-            btnClose = new System.Windows.Forms.ToolStripButton();
-            btnMaximize = new System.Windows.Forms.ToolStripButton();
-            btnMinimize = new System.Windows.Forms.ToolStripButton();
+            System.Resources.ResourceManager resources = new System.Resources.ResourceManager("DarkUI.Icons.DockIcons", typeof(DockIcons).Assembly);
+            lbTitle = new ToolStripLabel();
+            btnClose = new ToolStripButton();
+            btnMaximize = new ToolStripButton();
+            btnMinimize = new ToolStripButton();
             darkToolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,7 +59,7 @@
             darkToolStrip1.AutoSize = false;
             darkToolStrip1.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             darkToolStrip1.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
-            darkToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { lbTitle, btnClose, btnMaximize, btnMinimize });
+            darkToolStrip1.Items.AddRange(lbTitle, btnClose, btnMaximize, btnMinimize );
             darkToolStrip1.Location = new System.Drawing.Point(0, 0);
             darkToolStrip1.Name = "darkToolStrip1";
             darkToolStrip1.Padding = new System.Windows.Forms.Padding(5, 0, 1, 0);
@@ -64,7 +81,7 @@
             btnClose.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             btnClose.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
-            btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
+            btnClose.Image = (System.Drawing.Image)resources.GetObject("Close_vs");
             btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             btnClose.Name = "btnClose";
             btnClose.Size = new System.Drawing.Size(23, 25);
@@ -76,7 +93,7 @@
             btnMaximize.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             btnMaximize.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             btnMaximize.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
-            btnMaximize.Image = (System.Drawing.Image)resources.GetObject("btnMaximize.Image");
+            btnMaximize.Image = (System.Drawing.Image)resources.GetObject("PlanePreview");
             btnMaximize.ImageTransparentColor = System.Drawing.Color.Magenta;
             btnMaximize.Name = "btnMaximize";
             btnMaximize.Size = new System.Drawing.Size(23, 25);
@@ -89,7 +106,7 @@
             btnMinimize.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             btnMinimize.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             btnMinimize.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
-            btnMinimize.Image = (System.Drawing.Image)resources.GetObject("btnMinimize.Image");
+            btnMinimize.Image = (System.Drawing.Image)resources.GetObject("RemoveNoColor");
             btnMinimize.ImageTransparentColor = System.Drawing.Color.Magenta;
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new System.Drawing.Size(23, 25);
@@ -98,24 +115,11 @@
             // 
             // DarkDefaultTitleBar
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.Transparent;
-            Controls.Add(darkToolStrip1);
-            Name = "DarkDefaultTitleBar";
+            Name = "DarkTitleBar";
             Size = new System.Drawing.Size(729, 28);
-            Load += DarkDefaultTitleBar_Load;
             darkToolStrip1.ResumeLayout(false);
             darkToolStrip1.PerformLayout();
             ResumeLayout(false);
         }
-
-        #endregion
-
-        private DarkToolStrip darkToolStrip1;
-        private System.Windows.Forms.ToolStripLabel lbTitle;
-        private System.Windows.Forms.ToolStripButton btnClose;
-        private System.Windows.Forms.ToolStripButton btnMaximize;
-        private System.Windows.Forms.ToolStripButton btnMinimize;
     }
 }
