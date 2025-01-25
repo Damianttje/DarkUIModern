@@ -19,7 +19,7 @@ Changes reflect my needs, don't expect them to make any sense.
 - Hovering an undocked document over an open DarkHostForm will dock the dragged document in that form
 - Documentws can be docked back inside the parent forms. DarkDockForms with no docked documents close automatically
 
-### DarkDefaultTitleBar
+### DarkTitleBar
 - This component replaced the default WinForms title bar (FormBorderStyle)
 - The new title bar has 3 states selectable from the properties window: None (create your own), Standard (title, close, maximize, minimize), ToolWindow (title, close)
 - If you choose to create your own TitleBar you can use the Drag event of the DarkForm to move the form using your custom title bar.
