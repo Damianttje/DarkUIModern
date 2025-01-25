@@ -17,7 +17,7 @@ namespace DarkUI.Forms
         private const int _borderWidth = 2;
         private const int resizeAreaSize = 10;
         private Size _formSize;
-        private DarkDefaultTitleBar _titleBar;
+        private DarkTitleBar _titleBar;
         private DarkTitleBarStyle _titleBarStyle;
 
         [DllImport("user32.dll")]
@@ -156,7 +156,14 @@ namespace DarkUI.Forms
 
         private void InitializeComponent()
         {
-
+            SuspendLayout();
+            // 
+            // DarkForm
+            // 
+            ClientSize = new Size(284, 261);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "DarkForm";
+            ResumeLayout(false);
         }
 
         protected override void WndProc(ref Message m)
