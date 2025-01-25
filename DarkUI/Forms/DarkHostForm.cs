@@ -15,6 +15,7 @@ namespace DarkUI.Forms
             Application.AddMessageFilter(dockPanel.DockContentDragFilter);
 
             dockPanel.ContentAdded += DockPanel_ContentAdded;
+            dockPanel.ContentRemoved += DockPanel_ContentRemoved;
         }
 
         private void DockPanel_ContentAdded(object sender, DockContentEventArgs e)
