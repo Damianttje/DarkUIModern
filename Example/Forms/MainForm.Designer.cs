@@ -78,7 +78,7 @@ namespace Example
             toolMain.Location = new System.Drawing.Point(2, 2);
             toolMain.Name = "toolMain";
             toolMain.Padding = new System.Windows.Forms.Padding(5, 0, 1, 0);
-            toolMain.Size = new System.Drawing.Size(1228, 28);
+            toolMain.Size = new System.Drawing.Size(996, 28);
             toolMain.TabIndex = 1;
             toolMain.Text = "darkToolStrip1";
             // 
@@ -87,8 +87,8 @@ namespace Example
             lbTitle.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             lbTitle.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             lbTitle.Name = "lbTitle";
-            lbTitle.Size = new System.Drawing.Size(74, 25);
-            lbTitle.Text = "DarkUI - Test";
+            lbTitle.Size = new System.Drawing.Size(97, 25);
+            lbTitle.Text = "DarkUI - Example";
             // 
             // toolStripSeparator3
             // 
@@ -114,7 +114,7 @@ namespace Example
             mnuNewFile.Image = Icons.NewFile_6276;
             mnuNewFile.Name = "mnuNewFile";
             mnuNewFile.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N;
-            mnuNewFile.Size = new System.Drawing.Size(180, 22);
+            mnuNewFile.Size = new System.Drawing.Size(160, 22);
             mnuNewFile.Text = "&New file";
             // 
             // toolStripSeparator1
@@ -123,7 +123,7 @@ namespace Example
             toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             toolStripSeparator1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 1);
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
             // 
             // mnuClose
             // 
@@ -132,7 +132,7 @@ namespace Example
             mnuClose.Image = Icons.Close_16xLG;
             mnuClose.Name = "mnuClose";
             mnuClose.ShortcutKeys = System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4;
-            mnuClose.Size = new System.Drawing.Size(180, 22);
+            mnuClose.Size = new System.Drawing.Size(160, 22);
             mnuClose.Text = "&Close";
             // 
             // mnuView
@@ -150,7 +150,7 @@ namespace Example
             mnuDialog.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             mnuDialog.Image = Icons.properties_16xLG;
             mnuDialog.Name = "mnuDialog";
-            mnuDialog.Size = new System.Drawing.Size(180, 22);
+            mnuDialog.Size = new System.Drawing.Size(130, 22);
             mnuDialog.Text = "&Dialog test";
             // 
             // toolStripMenuItem1
@@ -225,7 +225,7 @@ namespace Example
             mnuProject.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             mnuProject.Image = Icons.application_16x;
             mnuProject.Name = "mnuProject";
-            mnuProject.Size = new System.Drawing.Size(180, 22);
+            mnuProject.Size = new System.Drawing.Size(156, 22);
             mnuProject.Text = "&Project Explorer";
             // 
             // mnuProperties
@@ -234,7 +234,7 @@ namespace Example
             mnuProperties.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             mnuProperties.Image = Icons.properties_16xLG;
             mnuProperties.Name = "mnuProperties";
-            mnuProperties.Size = new System.Drawing.Size(180, 22);
+            mnuProperties.Size = new System.Drawing.Size(156, 22);
             mnuProperties.Text = "P&roperties";
             // 
             // mnuConsole
@@ -243,7 +243,7 @@ namespace Example
             mnuConsole.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             mnuConsole.Image = Icons.Console;
             mnuConsole.Name = "mnuConsole";
-            mnuConsole.Size = new System.Drawing.Size(180, 22);
+            mnuConsole.Size = new System.Drawing.Size(156, 22);
             mnuConsole.Text = "&Console";
             // 
             // mnuLayers
@@ -252,7 +252,7 @@ namespace Example
             mnuLayers.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             mnuLayers.Image = Icons.Collection_16xLG;
             mnuLayers.Name = "mnuLayers";
-            mnuLayers.Size = new System.Drawing.Size(180, 22);
+            mnuLayers.Size = new System.Drawing.Size(156, 22);
             mnuLayers.Text = "&Layers";
             // 
             // mnuHistory
@@ -261,7 +261,7 @@ namespace Example
             mnuHistory.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             mnuHistory.Image = (System.Drawing.Image)resources.GetObject("mnuHistory.Image");
             mnuHistory.Name = "mnuHistory";
-            mnuHistory.Size = new System.Drawing.Size(180, 22);
+            mnuHistory.Size = new System.Drawing.Size(156, 22);
             mnuHistory.Text = "&History";
             // 
             // toolStripSeparator4
@@ -323,7 +323,7 @@ namespace Example
             mnuAbout.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             mnuAbout.Image = Icons.StatusAnnotations_Information_16xLG_color;
             mnuAbout.Name = "mnuAbout";
-            mnuAbout.Size = new System.Drawing.Size(180, 22);
+            mnuAbout.Size = new System.Drawing.Size(145, 22);
             mnuAbout.Text = "&About DarkUI";
             // 
             // stripMain
@@ -332,10 +332,10 @@ namespace Example
             stripMain.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             stripMain.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             stripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel6, toolStripStatusLabel5 });
-            stripMain.Location = new System.Drawing.Point(2, 1194);
+            stripMain.Location = new System.Drawing.Point(2, 752);
             stripMain.Name = "stripMain";
             stripMain.Padding = new System.Windows.Forms.Padding(0, 5, 0, 3);
-            stripMain.Size = new System.Drawing.Size(1228, 24);
+            stripMain.Size = new System.Drawing.Size(996, 24);
             stripMain.SizingGrip = false;
             stripMain.TabIndex = 2;
             stripMain.Text = "darkStatusStrip1";
@@ -353,7 +353,7 @@ namespace Example
             // 
             toolStripStatusLabel6.Margin = new System.Windows.Forms.Padding(0, 0, 50, 2);
             toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            toolStripStatusLabel6.Size = new System.Drawing.Size(1041, 14);
+            toolStripStatusLabel6.Size = new System.Drawing.Size(809, 14);
             toolStripStatusLabel6.Spring = true;
             toolStripStatusLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -372,14 +372,14 @@ namespace Example
             DockPanel.HostFormText = "";
             DockPanel.Location = new System.Drawing.Point(2, 30);
             DockPanel.Name = "DockPanel";
-            DockPanel.Size = new System.Drawing.Size(1228, 1164);
+            DockPanel.Size = new System.Drawing.Size(996, 722);
             DockPanel.TabIndex = 3;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1232, 1220);
+            ClientSize = new System.Drawing.Size(1000, 778);
             Controls.Add(DockPanel);
             Controls.Add(stripMain);
             Controls.Add(toolMain);
