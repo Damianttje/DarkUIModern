@@ -69,7 +69,34 @@ namespace DarkUI {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
+        internal static System.Drawing.Bitmap Close_vs
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("Close_vs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap PlanePreview
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("PlanePreview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap RemoveNoColor
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("RemoveNoColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>

@@ -71,10 +71,10 @@ namespace Example
             mnuMain.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             mnuMain.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { mnuFile, mnuView, mnuTools, mnuWindow, mnuHelp });
-            mnuMain.Location = new System.Drawing.Point(0, 0);
+            mnuMain.Location = new System.Drawing.Point(2, 2);
             mnuMain.Name = "mnuMain";
             mnuMain.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
-            mnuMain.Size = new System.Drawing.Size(944, 24);
+            mnuMain.Size = new System.Drawing.Size(972, 24);
             mnuMain.TabIndex = 0;
             mnuMain.Text = "darkMenuStrip1";
             // 
@@ -254,10 +254,10 @@ namespace Example
             toolMain.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             toolMain.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             toolMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { btnNewFile });
-            toolMain.Location = new System.Drawing.Point(0, 26);
+            toolMain.Location = new System.Drawing.Point(2, 28);
             toolMain.Name = "toolMain";
             toolMain.Padding = new System.Windows.Forms.Padding(5, 0, 1, 0);
-            toolMain.Size = new System.Drawing.Size(944, 28);
+            toolMain.Size = new System.Drawing.Size(972, 28);
             toolMain.TabIndex = 1;
             toolMain.Text = "darkToolStrip1";
             // 
@@ -279,10 +279,10 @@ namespace Example
             stripMain.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             stripMain.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
             stripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel6, toolStripStatusLabel5 });
-            stripMain.Location = new System.Drawing.Point(0, 618);
+            stripMain.Location = new System.Drawing.Point(2, 694);
             stripMain.Name = "stripMain";
             stripMain.Padding = new System.Windows.Forms.Padding(0, 5, 0, 3);
-            stripMain.Size = new System.Drawing.Size(944, 24);
+            stripMain.Size = new System.Drawing.Size(972, 24);
             stripMain.SizingGrip = false;
             stripMain.TabIndex = 2;
             stripMain.Text = "darkStatusStrip1";
@@ -300,7 +300,7 @@ namespace Example
             // 
             toolStripStatusLabel6.Margin = new System.Windows.Forms.Padding(0, 0, 50, 2);
             toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            toolStripStatusLabel6.Size = new System.Drawing.Size(757, 14);
+            toolStripStatusLabel6.Size = new System.Drawing.Size(785, 14);
             toolStripStatusLabel6.Spring = true;
             toolStripStatusLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -317,17 +317,17 @@ namespace Example
             DockPanel.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             DockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             DockPanel.HostFormText = "MonoEdit";
-            DockPanel.Location = new System.Drawing.Point(0, 54);
+            DockPanel.Location = new System.Drawing.Point(2, 56);
             DockPanel.Name = "DockPanel";
-            DockPanel.Size = new System.Drawing.Size(944, 564);
+            DockPanel.Size = new System.Drawing.Size(972, 638);
             DockPanel.TabIndex = 3;
             // 
             // darkSeparator1
             // 
             darkSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
-            darkSeparator1.Location = new System.Drawing.Point(0, 24);
+            darkSeparator1.Location = new System.Drawing.Point(2, 26);
             darkSeparator1.Name = "darkSeparator1";
-            darkSeparator1.Size = new System.Drawing.Size(944, 2);
+            darkSeparator1.Size = new System.Drawing.Size(972, 2);
             darkSeparator1.TabIndex = 4;
             darkSeparator1.Text = "darkSeparator1";
             // 
@@ -335,7 +335,7 @@ namespace Example
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(944, 642);
+            ClientSize = new System.Drawing.Size(976, 720);
             Controls.Add(DockPanel);
             Controls.Add(stripMain);
             Controls.Add(toolMain);
@@ -346,6 +346,7 @@ namespace Example
             MainMenuStrip = mnuMain;
             MinimumSize = new System.Drawing.Size(640, 480);
             Name = "MainForm";
+            ShowDefaultTitleBar = true;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Dark UI - Example";
             mnuMain.ResumeLayout(false);

@@ -465,8 +465,8 @@ namespace DarkUI.Docking
                     }
                 }
 
-                // Trigger when the tab is being dragged outside the bounds of the tab group
-                var point = Cursor.Position;
+                // Trigger when the tab is being dragged outside the bounds of the tab group (ISSUE: Tabs can't be dragged on the right side of the control)
+                var point = PointToTabArea(e.Location); // var point = Cursor.Position; -> This is the original code. Tabs can't be re-ordered by using this
                 if (point.X < 0 || point.X > ClientRectangle.Width || point.Y < 0 || point.Y > ClientRectangle.Height)
                 {
                     // Handle the tab being dragged outside the bounds

@@ -1141,6 +1141,16 @@ namespace DarkUI.Win32
         SYSTIMER = 0x118,
 
         /// <summary>
+        /// The WM_RESTORED message is sent to a minimized window when the window is restored.
+        /// </summary>
+        SC_MINIMIZE = 0xF020,
+
+        /// <summary>
+        /// The WM_RESTORED message is sent to a minimized window when the window is restored.
+        /// </summary>
+        SC_RESTORE = 0xF120,
+
+        /// <summary>
         /// The accessibility state has changed.
         /// </summary>
         HSHELL_ACCESSIBILITYSTATE = 11,
@@ -1195,5 +1205,53 @@ namespace DarkUI.Win32
         /// A top-level window is being replaced. The window exists when the system calls this hook.
         /// </summary>
         HSHELL_WINDOWREPLACED = 13
+    }
+
+    internal enum WMR
+    {
+        /// <summary>
+        /// Represents the client area of the window
+        /// </summary>
+        HTCLIENT = 1,
+
+        /// <summary>
+        /// Left border of a window, allows resize horizontally to the left
+        /// </summary>
+        HTLEFT = 10,
+
+        /// <summary>
+        /// Right border of a window, allows resize horizontally to the right
+        /// </summary>
+        HTRIGHT = 11,
+
+        /// <summary>
+        /// Upper-horizontal border of a window, allows resize vertically up
+        /// </summary>
+        HTTOP = 12,
+
+        /// <summary>
+        /// Upper-left corner of a window border, allows resize diagonally to the left
+        /// </summary>
+        HTTOPLEFT = 13,
+
+        /// <summary>
+        /// Upper-right corner of a window border, allows resize diagonally to the right
+        /// </summary>
+        HTTOPRIGHT = 14,
+
+        /// <summary>
+        /// Lower-horizontal border of a window, allows resize vertically down
+        /// </summary>
+        HTBOTTOM = 15,
+
+        /// <summary>
+        /// Lower-left corner of a window border, allows resize diagonally to the left
+        /// </summary>
+        HTBOTTOMLEFT = 16,
+
+        /// <summary>
+        /// Lower-right corner of a window border, allows resize diagonally to the right
+        /// </summary>
+        HTBOTTOMRIGHT = 17,
     }
 }

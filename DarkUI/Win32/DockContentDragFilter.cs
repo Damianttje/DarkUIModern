@@ -86,7 +86,7 @@ namespace DarkUI.Win32
                 }
                 else
                 {
-                    if(_dragContent.DockArea == DarkDockArea.Document)
+                    if(_dragContent.DockArea == DarkDockArea.Document && _targetRegion == null && _targetGroup == null)
                     {
                         string hostTtitle = _dockPanel.HostFormText == string.Empty || _dockPanel.HostFormText == null ? _dockPanel.Parent?.Text ?? "Tab Host" : _dockPanel.HostFormText;
 
@@ -259,6 +259,13 @@ namespace DarkUI.Win32
             // Not hovering over anything - hide the highlight
             if (_highlightForm.Visible)
                 _highlightForm.Hide();
+
+            if(_dragContent.DockArea == DarkDockArea.Document && _targetGroup == null && _targetRegion == null)
+            {
+                // Sets the cursor to moving when dragging a document
+                Cursor.Current = Cursors.SizeAll;
+                return;
+            }
 
             // Show we can't drag here
             Cursor.Current = Cursors.No;

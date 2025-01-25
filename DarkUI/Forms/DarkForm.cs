@@ -1,6 +1,10 @@
 ﻿using DarkUI.Config;
+using DarkUI.Controls;
+using DarkUI.Win32;
+using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace DarkUI.Forms
@@ -9,7 +13,16 @@ namespace DarkUI.Forms
     {
         #region Field Region
 
-        private bool _flatBorder;
+        private bool _flatBorder, _showDefaultTitleBar;
+        private const int _borderWidth = 2;
+        private const int resizeAreaSize = 10;
+        private Size _formSize;
+        private DarkDefaultTitleBar _titleBar;
+
+        [DllImport("user32.dll")]
+        protected static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        protected static extern bool ReleaseCapture();
 
         #endregion
 
@@ -28,6 +41,21 @@ namespace DarkUI.Forms
             }
         }
 
+        [Category("Appearance")]
+        [Description("Determines whether the default title bar should be rendered.")]
+        [DefaultValue(false)]
+        public bool ShowDefaultTitleBar
+        {
+            get => _showDefaultTitleBar;
+            set
+            {
+                _showDefaultTitleBar = value;
+                AddTitleBar();
+
+                Invalidate();
+            }
+        }
+
         #endregion
 
         #region Constructor Region
@@ -35,6 +63,10 @@ namespace DarkUI.Forms
         public DarkForm()
         {
             BackColor = Colors.GreyBackground;
+            Padding = new Padding(_borderWidth);
+
+            Resize += Resize_Form;
+            Load += (sender, args) => _formSize = ClientSize;
         }
 
         #endregion
@@ -55,6 +87,133 @@ namespace DarkUI.Forms
                 var modRect = new Rectangle(ClientRectangle.Location, new Size(ClientRectangle.Width - 1, ClientRectangle.Height - 1));
                 g.DrawRectangle(p, modRect);
             }
+        }
+
+        #endregion
+
+        #region Events
+
+        private void Resize_Form(object sender, EventArgs e)
+        {
+            _formSize = ClientSize;
+
+            switch (this.WindowState)
+            {
+                case FormWindowState.Maximized:
+                    this.Padding = new Padding(8);
+                    break;
+                case FormWindowState.Normal:
+                    if (Padding.Top != _borderWidth)
+                        this.Padding = new Padding(_borderWidth);
+                    break;
+            }
+        }
+
+        public void TitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            Drag(sender, e);
+        }
+
+        public void Minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        public void Maximize_Click(object sender, EventArgs e)
+        {
+            WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
+        }
+
+        public void Close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        #endregion
+
+        #region Methods
+
+        public void AddTitleBar()
+        {
+            _titleBar = new(this)
+            {
+                Dock = DockStyle.Top
+            };
+
+            Controls.Add(_titleBar);
+        }
+
+        public void Drag(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                _ = SendMessage(Handle, 0x112, 0xf012, 0);
+            }
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == (int)WM.NCHITTEST)
+            { //If the windows m is WM_NCHITTEST
+                base.WndProc(ref m);
+                if (this.WindowState == FormWindowState.Normal)//Resize the form if it is in normal state
+                {
+                    if ((int)m.Result == (int)WMR.HTCLIENT)//If the result of the m (mouse pointer) is in the client area of the window
+                    {
+                        Point screenPoint = new Point(m.LParam.ToInt32()); //Gets screen point coordinates(X and Y coordinate of the pointer)                           
+                        Point clientPoint = this.PointToClient(screenPoint); //Computes the location of the screen point into client coordinates                          
+                        if (clientPoint.Y <= resizeAreaSize)//If the pointer is at the top of the form (within the resize area- X coordinate)
+                        {
+                            if (clientPoint.X <= resizeAreaSize) //If the pointer is at the coordinate X=0 or less than the resizing area(X=10) in 
+                                m.Result = (IntPtr)(int)WMR.HTTOPLEFT; //Resize diagonally to the left
+                            else if (clientPoint.X < (this.Size.Width - resizeAreaSize))//If the pointer is at the coordinate X=11 or less than the width of the form(X=Form.Width-resizeArea)
+                                m.Result = (IntPtr)(int)WMR.HTTOP; //Resize vertically up
+                            else //Resize diagonally to the right
+                                m.Result = (IntPtr)(int)WMR.HTTOPRIGHT;
+                        }
+                        else if (clientPoint.Y <= (this.Size.Height - resizeAreaSize)) //If the pointer is inside the form at the Y coordinate(discounting the resize area size)
+                        {
+                            if (clientPoint.X <= resizeAreaSize)//Resize horizontally to the left
+                                m.Result = (IntPtr)(int)WMR.HTLEFT;
+                            else if (clientPoint.X > (this.Width - resizeAreaSize))//Resize horizontally to the right
+                                m.Result = (IntPtr)(int)WMR.HTRIGHT;
+                        }
+                        else
+                        {
+                            if (clientPoint.X <= resizeAreaSize)//Resize diagonally to the left
+                                m.Result = (IntPtr)(int)WMR.HTBOTTOMLEFT;
+                            else if (clientPoint.X < (this.Size.Width - resizeAreaSize)) //Resize vertically down
+                                m.Result = (IntPtr)(int)WMR.HTBOTTOM;
+                            else //Resize diagonally to the right
+                                m.Result = (IntPtr)(int)WMR.HTBOTTOMRIGHT;
+                        }
+                    }
+                }
+                return;
+            }
+
+            //Remove border and keep snap window
+            if (m.Msg == (int)WM.NCCALCSIZE && m.WParam.ToInt32() == 1)
+            {
+                return;
+            }
+            //Keep form size when it is minimized and restored. Since the form is resized because it takes into account the size of the title bar and borders.
+            if (m.Msg == (int)WM.SYSCOMMAND)
+            {
+                /// <see cref="https://docs.microsoft.com/en-us/windows/win32/menurc/wm-syscommand"/>
+                /// Quote:
+                /// In WM_SYSCOMMAND messages, the four low - order bits of the wParam parameter 
+                /// are used internally by the system.To obtain the correct result when testing 
+                /// the value of wParam, an application must combine the value 0xFFF0 with the 
+                /// wParam value by using the bitwise AND operator.
+                int wParam = (m.WParam.ToInt32() & 0xFFF0);
+                if (wParam == (int)WM.SC_MINIMIZE)  //Before
+                    _formSize = this.ClientSize;
+                if (wParam == (int)WM.SC_RESTORE)// Restored form(Before)
+                    this.Size = _formSize;
+            }
+            base.WndProc(ref m);
         }
 
         #endregion

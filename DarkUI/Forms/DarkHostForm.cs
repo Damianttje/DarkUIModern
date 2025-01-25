@@ -1,4 +1,5 @@
 ﻿using DarkUI.Docking;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace DarkUI.Forms
@@ -13,10 +14,20 @@ namespace DarkUI.Forms
             InitializeComponent();
 
             Application.AddMessageFilter(dockPanel.DockContentDragFilter);
+
+            dockPanel.ContentAdded += DockPanel_ContentAdded;
+        }
+
+        private void DockPanel_ContentAdded(object sender, DockContentEventArgs e)
+        {
+            // Withouth this, the MouseDrag event will not be captured by the DockPanel
+            Focus();
         }
 
         private void DockPanel_ContentRemoved(object sender, DockContentEventArgs e)
         {
+            Focus(); // Play it safe and focus again
+
             if (!HasContent)
             {
                 DockDocumentManager.FormClosed(this);
