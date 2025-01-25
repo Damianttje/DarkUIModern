@@ -51,7 +51,7 @@ namespace DarkUI.Forms
             set
             {
                 _titleBarStyle = value;
-                if(value != DarkTitleBarStyle.None)
+                if (value != DarkTitleBarStyle.None)
                     AddTitleBar();
 
                 Invalidate();
@@ -152,6 +152,11 @@ namespace DarkUI.Forms
                 ReleaseCapture();
                 _ = SendMessage(Handle, 0x112, 0xf012, 0);
             }
+        }
+
+        private void InitializeComponent()
+        {
+
         }
 
         protected override void WndProc(ref Message m)
