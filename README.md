@@ -11,7 +11,7 @@ Dark themed control and docking library for .NET WinForms.
 DarkUI is an attempt to create a simple, extensible control library which emulates the look and feel of popular tabbed document interfaces such as Visual Studio, Photoshop, WebStorm, and XCode. Originally just a collection of bug fixes and enhancements built on top of WinForms, it has now evolved in to a fully working docking and control library.
 
 ## Refit Changes
-Changes reflect my needs, don't expect them to make any sense.
+Changes reflect my needs, don't expect them to make any sense. Contributions are welcomed though!
 
 ### Dark Documents
 - Document Tabs can be dragged outside the control bounds and undock the DocumentContent
