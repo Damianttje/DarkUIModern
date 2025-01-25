@@ -1,7 +1,7 @@
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/MainFormScreenshot.png" />
 
 ## DarkUI-Refit
-Fork of the [Darkui](https://github.com/RobinPerris/DarkUI) DarkUI library originally created by Robin Perris who sadly passed away.
+Fork of the [Darkui](https://github.com/RobinPerris/DarkUI) library originally created by Robin Perris who sadly passed away.
 This fork is primarily for personal changes and needs, but if you find any changes that you like to use, feel free to use / modify this.
 
 ## DarkUI
