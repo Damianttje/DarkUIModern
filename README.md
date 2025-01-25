@@ -1,4 +1,4 @@
-[MainForm](https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/MainFormScreenshot.png)
+<img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/MainFormScreenshot.png" />
 
 ## DarkUI-Refit
 Fork of the [Darkui](https://github.com/RobinPerris/DarkUI) DarkUI library originally created by Robin Perris who sadly passed away.
@@ -23,7 +23,8 @@ Changes reflect my needs, don't expect them to make any sense.
 - This component replaced the default WinForms title bar (FormBorderStyle)
 - The new title bar has 3 states selectable from the properties window: None (create your own), Standard (title, close, maximize, minimize), ToolWindow (title, close)
 - If you choose to create your own TitleBar you can use the Drag event of the DarkForm to move the form using your custom title bar.
-[TitleBarStyle](https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkDefaultTitleBarProperty.png)
+
+<img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkDefaultTitleBarProperty.png" />
 
 ### Demo
 - The demo has been updated to showcase the new features (undocking documents, title bar)
