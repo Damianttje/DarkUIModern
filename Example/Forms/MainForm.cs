@@ -92,9 +92,7 @@ namespace Example
             DockPanel.ContentRemoved += DockPanel_ContentRemoved;
 
             mnuNewFile.Click += NewFile_Click;
-            mnuClose.Click += Close_Click;
-
-            btnNewFile.Click += NewFile_Click;
+            btnClose.Click += Close_Click;
 
             mnuDialog.Click += Dialog_Click;
 
@@ -105,6 +103,12 @@ namespace Example
             mnuHistory.Click += History_Click;
 
             mnuAbout.Click += About_Click;
+
+            // Title bar window events
+            toolMain.MouseDown += TitleBar_MouseDown;
+            btnClose.Click += Close_Click;
+            btnMaximize.Click += Maximize_Click;
+            btnMinimize.Click += Minimize_Click;
         }
 
         private void ToggleToolWindow(DarkToolWindow toolWindow)
@@ -208,7 +212,7 @@ namespace Example
             var state = SerializerHelper.Deserialize<DockPanelState>(path);
             DockPanel.RestoreDockPanelState(state, GetContentBySerializationKey);
         }
-         
+
         private DarkDockContent GetContentBySerializationKey(string key)
         {
             foreach (var window in _toolWindows)

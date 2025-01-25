@@ -45,7 +45,34 @@ namespace Example.Properties {
                 return resourceMan;
             }
         }
-        
+
+        internal static System.Drawing.Bitmap Close_vs
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("Close_vs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap PlanePreview
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("PlanePreview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap RemoveNoColor
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("RemoveNoColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
