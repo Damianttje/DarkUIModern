@@ -86,6 +86,11 @@ namespace DarkUI.Controls
         [DefaultValue(false)]
         public bool ShowIcons { get; set; }
 
+        [Category("Appearance")]
+        [Description("Determines whether details are rendered with the list items.")]
+        [DefaultValue(false)]
+        public bool ShowDetails { get; set; }
+
         #endregion
 
         #region Constructor Region
@@ -496,10 +501,6 @@ namespace DarkUI.Controls
             return result;
         }
 
-        #endregion
-
-        #region Paint Region
-
         protected override void PaintContent(Graphics g)
         {
             var range = ItemIndexesInView().ToList();
@@ -549,13 +550,25 @@ namespace DarkUI.Controls
                     };
 
                     var modFont = new Font(Font, Items[i].FontStyle);
+                    var detilsFont = new Font(Font.FontFamily, Font.Size - 1, FontStyle.Italic);
 
-                    var modRect = new Rectangle(rect.Left + 2, rect.Top, rect.Width, rect.Height);
+                    Rectangle modRect;
+                    if(ShowDetails)
+                        modRect = new Rectangle(rect.Left + 2, rect.Top - 5, rect.Width, rect.Height);
+                    else
+                        modRect = new Rectangle(rect.Left + 2, rect.Top, rect.Width, rect.Height);
 
                     if (ShowIcons)
                         modRect.X += _iconSize + 8;
 
                     g.DrawString(Items[i].Text, modFont, b, modRect, stringFormat);
+
+                    // Draw Details
+                    if (ShowDetails)
+                    {
+                        var detailsRect = new Rectangle(modRect.X, modRect.Y + 15, modRect.Width, modRect.Height);
+                        g.DrawString(Items[i].Details ?? "<empty>", detilsFont, b, detailsRect, stringFormat);
+                    }
                 }
             }
         }

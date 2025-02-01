@@ -27,10 +27,11 @@ namespace DarkUI.Controls
             {
                 _text = value;
 
-                if (TextChanged != null)
-                    TextChanged(this, new EventArgs());
+                TextChanged?.Invoke(this, new EventArgs());
             }
         }
+
+        public string? Details { get; set; } 
 
         public Rectangle Area { get; set; }
 
