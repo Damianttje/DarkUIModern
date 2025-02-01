@@ -31,6 +31,13 @@ Important: `FormBorderStyle` needs to be anything but `None`. The TitleBar will 
 
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkDefaultTitleBarProperty.png" />
 
+### DarkListView
+- The DarkListItem ha sa new Property named Details
+- This Property is rendered under the normal Text (it is slightly smalled and in Italic)
+- This features can be turned on or off from the Desginer property `ShowDetails`
+
+<img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkListView_Details.png" />
+
 ### Demo
 - The demo has been updated to showcase the new features (undocking documents, title bar)
 
