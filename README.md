@@ -27,6 +27,8 @@ Changes reflect my needs, don't expect them to make any sense. Contributions are
 - If you choose to create your own TitleBar you can use the Drag event of the DarkForm to move the form using your custom title bar.
 - The title is changed using the forms Text property
 
+Important: `FormBorderStyle` needs to be anything but `None`. The TitleBar will break if you set it to `None`
+
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkDefaultTitleBarProperty.png" />
 
 ### Demo
