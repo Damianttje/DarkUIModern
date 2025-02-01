@@ -16,7 +16,7 @@ namespace DarkUI.Controls
         #region Property Region
 
         [Browsable(false)]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public new Padding Padding
         {
             get { return base.Padding; }
