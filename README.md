@@ -1,7 +1,7 @@
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/MainFormScreenshot.png" />
 
 ## DarkUI-Refit
-Fork of the [Darkui](https://github.com/RobinPerris/DarkUI) DarkUI library originally created by Robin Perris who sadly passed away.
+Fork of the [DarkUI](https://github.com/RobinPerris/DarkUI) library originally created by Robin Perris who sadly passed away.
 This fork is primarily for personal changes and needs, but if you find any changes that you like to use, feel free to use / modify this.
 
 ## DarkUI
@@ -26,6 +26,8 @@ Changes reflect my needs, don't expect them to make any sense. Contributions are
 - The new title bar has 3 states selectable from the properties window: None (create your own), Standard (title, close, maximize, minimize), ToolWindow (title, close)
 - If you choose to create your own TitleBar you can use the Drag event of the DarkForm to move the form using your custom title bar.
 - The title is changed using the forms Text property
+
+Important: `FormBorderStyle` needs to be anything but `None`. The TitleBar will break if you set it to `None`
 
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkDefaultTitleBarProperty.png" />
 
