@@ -20,6 +20,9 @@ namespace Example
                 lstLayers.Items.Add(item);
             }
 
+            lstLayers.Items[0].Details = "This is a test";
+            lstLayers.Items[1].Details = "This is a test 2";
+
             // Build dropdown list data
             for (var i = 0; i < 5; i++)
             {

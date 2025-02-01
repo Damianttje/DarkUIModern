@@ -3,7 +3,7 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
     <PackageId>DarkUI.Refit</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>RobinPerris; Stefan Cuvin</Authors>
     <Company>EasyTech</Company>
     <Product>DarkUI-Refit</Product>
