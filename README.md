@@ -4,6 +4,11 @@
 Fork of the [DarkUI](https://github.com/RobinPerris/DarkUI) library originally created by Robin Perris who sadly passed away.
 This fork is primarily for personal changes and needs, but if you find any changes that you like to use, feel free to use / modify this.
 
+### Future plans
+- DarkGridView (images and text in row/column grid)
+- DarkToast (toats notifications)
+- DarkSplshScreen (a splash screen system that can be used to show loading progress)
+
 [Nuget](https://www.nuget.org/packages/DarkUI.Refit)
 
 ## DarkUI
