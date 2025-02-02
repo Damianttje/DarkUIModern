@@ -4,6 +4,8 @@
 Fork of the [DarkUI](https://github.com/RobinPerris/DarkUI) library originally created by Robin Perris who sadly passed away.
 This fork is primarily for personal changes and needs, but if you find any changes that you like to use, feel free to use / modify this.
 
+[Nuget](https://www.nuget.org/packages/DarkUI.Refit)
+
 ## DarkUI
 Dark themed control and docking library for .NET WinForms.
 
