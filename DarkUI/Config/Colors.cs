@@ -108,5 +108,25 @@ namespace DarkUI.Config
         {
             get { return Color.FromArgb(159, 178, 196); }
         }
+
+        public static Color Info
+        {
+            get { return Color.FromArgb(105, 190, 255); }
+        }
+
+        public static Color Success
+        {
+            get { return Color.FromArgb(143, 228, 143); }
+        }
+
+        public static Color Warning
+        {
+            get { return Color.FromArgb(255, 223, 151); }
+        }
+
+        public static Color Error
+        {
+            get { return Color.FromArgb(241, 75, 92); }
+        }
     }
 }

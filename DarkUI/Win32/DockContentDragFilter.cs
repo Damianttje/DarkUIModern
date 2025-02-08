@@ -1,6 +1,7 @@
 ﻿using DarkUI.Config;
 using DarkUI.Docking;
 using DarkUI.Forms;
+using DarkUI.Managers;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;

@@ -31,217 +31,298 @@ namespace Example
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.darkRadioButton3 = new DarkUI.Controls.DarkRadioButton();
-            this.darkRadioButton2 = new DarkUI.Controls.DarkRadioButton();
-            this.darkRadioButton1 = new DarkUI.Controls.DarkRadioButton();
-            this.darkTitle1 = new DarkUI.Controls.DarkTitle();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.darkCheckBox3 = new DarkUI.Controls.DarkCheckBox();
-            this.darkCheckBox2 = new DarkUI.Controls.DarkCheckBox();
-            this.darkCheckBox1 = new DarkUI.Controls.DarkCheckBox();
-            this.darkTitle2 = new DarkUI.Controls.DarkTitle();
-            this.darkScrollBar1 = new DarkUI.Controls.DarkScrollBar();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.darkTitle3 = new DarkUI.Controls.DarkTitle();
-            this.cmbList = new DarkUI.Controls.DarkDropdownList();
-            this.pnlMain.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.SuspendLayout();
+            pnlMain = new System.Windows.Forms.Panel();
+            panel4 = new System.Windows.Forms.Panel();
+            btnCloseAll = new DarkUI.Controls.DarkButton();
+            btnShowError = new DarkUI.Controls.DarkButton();
+            btnShowSuccess = new DarkUI.Controls.DarkButton();
+            btnShowWarning = new DarkUI.Controls.DarkButton();
+            darkTitle4 = new DarkUI.Controls.DarkTitle();
+            btnShowInfo = new DarkUI.Controls.DarkButton();
+            panel3 = new System.Windows.Forms.Panel();
+            cmbList = new DarkUI.Controls.DarkDropdownList();
+            darkTitle3 = new DarkUI.Controls.DarkTitle();
+            panel1 = new System.Windows.Forms.Panel();
+            darkRadioButton3 = new DarkUI.Controls.DarkRadioButton();
+            darkRadioButton2 = new DarkUI.Controls.DarkRadioButton();
+            darkRadioButton1 = new DarkUI.Controls.DarkRadioButton();
+            darkTitle1 = new DarkUI.Controls.DarkTitle();
+            panel2 = new System.Windows.Forms.Panel();
+            darkCheckBox3 = new DarkUI.Controls.DarkCheckBox();
+            darkCheckBox2 = new DarkUI.Controls.DarkCheckBox();
+            darkCheckBox1 = new DarkUI.Controls.DarkCheckBox();
+            darkTitle2 = new DarkUI.Controls.DarkTitle();
+            darkScrollBar1 = new DarkUI.Controls.DarkScrollBar();
+            pnlMain.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlMain
             // 
-            this.pnlMain.Controls.Add(this.panel3);
-            this.pnlMain.Controls.Add(this.panel1);
-            this.pnlMain.Controls.Add(this.panel2);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 25);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Padding = new System.Windows.Forms.Padding(10, 10, 5, 10);
-            this.pnlMain.Size = new System.Drawing.Size(265, 425);
-            this.pnlMain.TabIndex = 0;
+            pnlMain.Controls.Add(panel4);
+            pnlMain.Controls.Add(panel3);
+            pnlMain.Controls.Add(panel1);
+            pnlMain.Controls.Add(panel2);
+            pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlMain.Location = new System.Drawing.Point(0, 25);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Padding = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            pnlMain.Size = new System.Drawing.Size(265, 425);
+            pnlMain.TabIndex = 0;
             // 
-            // panel1
+            // panel4
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.darkRadioButton3);
-            this.panel1.Controls.Add(this.darkRadioButton2);
-            this.panel1.Controls.Add(this.darkRadioButton1);
-            this.panel1.Controls.Add(this.darkTitle1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(10, 103);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel1.Size = new System.Drawing.Size(250, 93);
-            this.panel1.TabIndex = 2;
+            panel4.Controls.Add(btnCloseAll);
+            panel4.Controls.Add(btnShowError);
+            panel4.Controls.Add(btnShowSuccess);
+            panel4.Controls.Add(btnShowWarning);
+            panel4.Controls.Add(darkTitle4);
+            panel4.Controls.Add(btnShowInfo);
+            panel4.Location = new System.Drawing.Point(10, 264);
+            panel4.Name = "panel4";
+            panel4.Size = new System.Drawing.Size(250, 148);
+            panel4.TabIndex = 4;
             // 
-            // darkRadioButton3
+            // btnCloseAll
             // 
-            this.darkRadioButton3.AutoSize = true;
-            this.darkRadioButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkRadioButton3.Enabled = false;
-            this.darkRadioButton3.Location = new System.Drawing.Point(0, 64);
-            this.darkRadioButton3.Name = "darkRadioButton3";
-            this.darkRadioButton3.Size = new System.Drawing.Size(250, 19);
-            this.darkRadioButton3.TabIndex = 6;
-            this.darkRadioButton3.TabStop = true;
-            this.darkRadioButton3.Text = "Disabled radiobutton";
+            btnCloseAll.Location = new System.Drawing.Point(3, 115);
+            btnCloseAll.Name = "btnCloseAll";
+            btnCloseAll.Padding = new System.Windows.Forms.Padding(5);
+            btnCloseAll.Size = new System.Drawing.Size(77, 30);
+            btnCloseAll.TabIndex = 13;
+            btnCloseAll.Text = "Close all";
+            btnCloseAll.Click += btnCloseAll_Click;
             // 
-            // darkRadioButton2
+            // btnShowError
             // 
-            this.darkRadioButton2.AutoSize = true;
-            this.darkRadioButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkRadioButton2.Location = new System.Drawing.Point(0, 45);
-            this.darkRadioButton2.Name = "darkRadioButton2";
-            this.darkRadioButton2.Size = new System.Drawing.Size(250, 19);
-            this.darkRadioButton2.TabIndex = 5;
-            this.darkRadioButton2.TabStop = true;
-            this.darkRadioButton2.Text = "Radiobutton";
+            btnShowError.Location = new System.Drawing.Point(86, 72);
+            btnShowError.Name = "btnShowError";
+            btnShowError.Padding = new System.Windows.Forms.Padding(5);
+            btnShowError.Size = new System.Drawing.Size(77, 37);
+            btnShowError.TabIndex = 12;
+            btnShowError.Text = "Show Error";
+            btnShowError.Click += btnShowError_Click;
             // 
-            // darkRadioButton1
+            // btnShowSuccess
             // 
-            this.darkRadioButton1.AutoSize = true;
-            this.darkRadioButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkRadioButton1.Location = new System.Drawing.Point(0, 26);
-            this.darkRadioButton1.Name = "darkRadioButton1";
-            this.darkRadioButton1.Size = new System.Drawing.Size(250, 19);
-            this.darkRadioButton1.TabIndex = 4;
-            this.darkRadioButton1.TabStop = true;
-            this.darkRadioButton1.Text = "Radiobutton";
+            btnShowSuccess.Location = new System.Drawing.Point(86, 29);
+            btnShowSuccess.Name = "btnShowSuccess";
+            btnShowSuccess.Padding = new System.Windows.Forms.Padding(5);
+            btnShowSuccess.Size = new System.Drawing.Size(77, 37);
+            btnShowSuccess.TabIndex = 10;
+            btnShowSuccess.Text = "Show Success";
+            btnShowSuccess.Click += btnShowSuccess_Click;
             // 
-            // darkTitle1
+            // btnShowWarning
             // 
-            this.darkTitle1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkTitle1.Location = new System.Drawing.Point(0, 0);
-            this.darkTitle1.Name = "darkTitle1";
-            this.darkTitle1.Size = new System.Drawing.Size(250, 26);
-            this.darkTitle1.TabIndex = 7;
-            this.darkTitle1.Text = "Radio buttons";
+            btnShowWarning.Location = new System.Drawing.Point(3, 72);
+            btnShowWarning.Name = "btnShowWarning";
+            btnShowWarning.Padding = new System.Windows.Forms.Padding(5);
+            btnShowWarning.Size = new System.Drawing.Size(77, 37);
+            btnShowWarning.TabIndex = 11;
+            btnShowWarning.Text = "Show Warning";
+            btnShowWarning.Click += btnShowWarning_Click;
             // 
-            // panel2
+            // darkTitle4
             // 
-            this.panel2.AutoSize = true;
-            this.panel2.Controls.Add(this.darkCheckBox3);
-            this.panel2.Controls.Add(this.darkCheckBox2);
-            this.panel2.Controls.Add(this.darkCheckBox1);
-            this.panel2.Controls.Add(this.darkTitle2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(10, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel2.Size = new System.Drawing.Size(250, 93);
-            this.panel2.TabIndex = 1;
+            darkTitle4.Dock = System.Windows.Forms.DockStyle.Top;
+            darkTitle4.Location = new System.Drawing.Point(0, 0);
+            darkTitle4.Name = "darkTitle4";
+            darkTitle4.Size = new System.Drawing.Size(250, 26);
+            darkTitle4.TabIndex = 8;
+            darkTitle4.Text = "Toast Notifications";
             // 
-            // darkCheckBox3
+            // btnShowInfo
             // 
-            this.darkCheckBox3.AutoSize = true;
-            this.darkCheckBox3.Checked = true;
-            this.darkCheckBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.darkCheckBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkCheckBox3.Enabled = false;
-            this.darkCheckBox3.Location = new System.Drawing.Point(0, 64);
-            this.darkCheckBox3.Name = "darkCheckBox3";
-            this.darkCheckBox3.Size = new System.Drawing.Size(250, 19);
-            this.darkCheckBox3.TabIndex = 6;
-            this.darkCheckBox3.Text = "Disabled checked checkbox";
-            // 
-            // darkCheckBox2
-            // 
-            this.darkCheckBox2.AutoSize = true;
-            this.darkCheckBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkCheckBox2.Enabled = false;
-            this.darkCheckBox2.Location = new System.Drawing.Point(0, 45);
-            this.darkCheckBox2.Name = "darkCheckBox2";
-            this.darkCheckBox2.Size = new System.Drawing.Size(250, 19);
-            this.darkCheckBox2.TabIndex = 5;
-            this.darkCheckBox2.Text = "Disabled checkbox";
-            // 
-            // darkCheckBox1
-            // 
-            this.darkCheckBox1.AutoSize = true;
-            this.darkCheckBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkCheckBox1.Location = new System.Drawing.Point(0, 26);
-            this.darkCheckBox1.Name = "darkCheckBox1";
-            this.darkCheckBox1.Size = new System.Drawing.Size(250, 19);
-            this.darkCheckBox1.TabIndex = 4;
-            this.darkCheckBox1.Text = "Checkbox";
-            // 
-            // darkTitle2
-            // 
-            this.darkTitle2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkTitle2.Location = new System.Drawing.Point(0, 0);
-            this.darkTitle2.Name = "darkTitle2";
-            this.darkTitle2.Size = new System.Drawing.Size(250, 26);
-            this.darkTitle2.TabIndex = 8;
-            this.darkTitle2.Text = "Check boxes";
-            // 
-            // darkScrollBar1
-            // 
-            this.darkScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.darkScrollBar1.Enabled = false;
-            this.darkScrollBar1.Location = new System.Drawing.Point(265, 25);
-            this.darkScrollBar1.Maximum = 5;
-            this.darkScrollBar1.Minimum = 1;
-            this.darkScrollBar1.Name = "darkScrollBar1";
-            this.darkScrollBar1.Size = new System.Drawing.Size(15, 425);
-            this.darkScrollBar1.TabIndex = 1;
-            this.darkScrollBar1.Text = "darkScrollBar1";
+            btnShowInfo.Location = new System.Drawing.Point(3, 29);
+            btnShowInfo.Name = "btnShowInfo";
+            btnShowInfo.Padding = new System.Windows.Forms.Padding(5);
+            btnShowInfo.Size = new System.Drawing.Size(77, 37);
+            btnShowInfo.TabIndex = 9;
+            btnShowInfo.Text = "Show Info";
+            btnShowInfo.Click += btnShowInfo_Click;
             // 
             // panel3
             // 
-            this.panel3.AutoSize = true;
-            this.panel3.Controls.Add(this.cmbList);
-            this.panel3.Controls.Add(this.darkTitle3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(10, 196);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel3.Size = new System.Drawing.Size(250, 62);
-            this.panel3.TabIndex = 3;
-            // 
-            // darkTitle3
-            // 
-            this.darkTitle3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.darkTitle3.Location = new System.Drawing.Point(0, 0);
-            this.darkTitle3.Name = "darkTitle3";
-            this.darkTitle3.Size = new System.Drawing.Size(250, 26);
-            this.darkTitle3.TabIndex = 7;
-            this.darkTitle3.Text = "Lists";
+            panel3.AutoSize = true;
+            panel3.Controls.Add(cmbList);
+            panel3.Controls.Add(darkTitle3);
+            panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            panel3.Location = new System.Drawing.Point(10, 196);
+            panel3.Name = "panel3";
+            panel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            panel3.Size = new System.Drawing.Size(250, 62);
+            panel3.TabIndex = 3;
             // 
             // cmbList
             // 
-            this.cmbList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbList.Location = new System.Drawing.Point(0, 26);
-            this.cmbList.Name = "cmbList";
-            this.cmbList.Size = new System.Drawing.Size(250, 26);
-            this.cmbList.TabIndex = 8;
-            this.cmbList.Text = "darkDropdownList1";
+            cmbList.Dock = System.Windows.Forms.DockStyle.Top;
+            cmbList.Location = new System.Drawing.Point(0, 26);
+            cmbList.Name = "cmbList";
+            cmbList.Size = new System.Drawing.Size(250, 26);
+            cmbList.TabIndex = 8;
+            cmbList.Text = "darkDropdownList1";
+            // 
+            // darkTitle3
+            // 
+            darkTitle3.Dock = System.Windows.Forms.DockStyle.Top;
+            darkTitle3.Location = new System.Drawing.Point(0, 0);
+            darkTitle3.Name = "darkTitle3";
+            darkTitle3.Size = new System.Drawing.Size(250, 26);
+            darkTitle3.TabIndex = 7;
+            darkTitle3.Text = "Lists";
+            // 
+            // panel1
+            // 
+            panel1.AutoSize = true;
+            panel1.Controls.Add(darkRadioButton3);
+            panel1.Controls.Add(darkRadioButton2);
+            panel1.Controls.Add(darkRadioButton1);
+            panel1.Controls.Add(darkTitle1);
+            panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            panel1.Location = new System.Drawing.Point(10, 103);
+            panel1.Name = "panel1";
+            panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            panel1.Size = new System.Drawing.Size(250, 93);
+            panel1.TabIndex = 2;
+            // 
+            // darkRadioButton3
+            // 
+            darkRadioButton3.AutoSize = true;
+            darkRadioButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            darkRadioButton3.Enabled = false;
+            darkRadioButton3.Location = new System.Drawing.Point(0, 64);
+            darkRadioButton3.Name = "darkRadioButton3";
+            darkRadioButton3.Size = new System.Drawing.Size(250, 19);
+            darkRadioButton3.TabIndex = 6;
+            darkRadioButton3.TabStop = true;
+            darkRadioButton3.Text = "Disabled radiobutton";
+            // 
+            // darkRadioButton2
+            // 
+            darkRadioButton2.AutoSize = true;
+            darkRadioButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            darkRadioButton2.Location = new System.Drawing.Point(0, 45);
+            darkRadioButton2.Name = "darkRadioButton2";
+            darkRadioButton2.Size = new System.Drawing.Size(250, 19);
+            darkRadioButton2.TabIndex = 5;
+            darkRadioButton2.TabStop = true;
+            darkRadioButton2.Text = "Radiobutton";
+            // 
+            // darkRadioButton1
+            // 
+            darkRadioButton1.AutoSize = true;
+            darkRadioButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            darkRadioButton1.Location = new System.Drawing.Point(0, 26);
+            darkRadioButton1.Name = "darkRadioButton1";
+            darkRadioButton1.Size = new System.Drawing.Size(250, 19);
+            darkRadioButton1.TabIndex = 4;
+            darkRadioButton1.TabStop = true;
+            darkRadioButton1.Text = "Radiobutton";
+            // 
+            // darkTitle1
+            // 
+            darkTitle1.Dock = System.Windows.Forms.DockStyle.Top;
+            darkTitle1.Location = new System.Drawing.Point(0, 0);
+            darkTitle1.Name = "darkTitle1";
+            darkTitle1.Size = new System.Drawing.Size(250, 26);
+            darkTitle1.TabIndex = 7;
+            darkTitle1.Text = "Radio buttons";
+            // 
+            // panel2
+            // 
+            panel2.AutoSize = true;
+            panel2.Controls.Add(darkCheckBox3);
+            panel2.Controls.Add(darkCheckBox2);
+            panel2.Controls.Add(darkCheckBox1);
+            panel2.Controls.Add(darkTitle2);
+            panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            panel2.Location = new System.Drawing.Point(10, 10);
+            panel2.Name = "panel2";
+            panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            panel2.Size = new System.Drawing.Size(250, 93);
+            panel2.TabIndex = 1;
+            // 
+            // darkCheckBox3
+            // 
+            darkCheckBox3.AutoSize = true;
+            darkCheckBox3.Checked = true;
+            darkCheckBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            darkCheckBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            darkCheckBox3.Enabled = false;
+            darkCheckBox3.Location = new System.Drawing.Point(0, 64);
+            darkCheckBox3.Name = "darkCheckBox3";
+            darkCheckBox3.Size = new System.Drawing.Size(250, 19);
+            darkCheckBox3.TabIndex = 6;
+            darkCheckBox3.Text = "Disabled checked checkbox";
+            // 
+            // darkCheckBox2
+            // 
+            darkCheckBox2.AutoSize = true;
+            darkCheckBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            darkCheckBox2.Enabled = false;
+            darkCheckBox2.Location = new System.Drawing.Point(0, 45);
+            darkCheckBox2.Name = "darkCheckBox2";
+            darkCheckBox2.Size = new System.Drawing.Size(250, 19);
+            darkCheckBox2.TabIndex = 5;
+            darkCheckBox2.Text = "Disabled checkbox";
+            // 
+            // darkCheckBox1
+            // 
+            darkCheckBox1.AutoSize = true;
+            darkCheckBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            darkCheckBox1.Location = new System.Drawing.Point(0, 26);
+            darkCheckBox1.Name = "darkCheckBox1";
+            darkCheckBox1.Size = new System.Drawing.Size(250, 19);
+            darkCheckBox1.TabIndex = 4;
+            darkCheckBox1.Text = "Checkbox";
+            // 
+            // darkTitle2
+            // 
+            darkTitle2.Dock = System.Windows.Forms.DockStyle.Top;
+            darkTitle2.Location = new System.Drawing.Point(0, 0);
+            darkTitle2.Name = "darkTitle2";
+            darkTitle2.Size = new System.Drawing.Size(250, 26);
+            darkTitle2.TabIndex = 8;
+            darkTitle2.Text = "Check boxes";
+            // 
+            // darkScrollBar1
+            // 
+            darkScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
+            darkScrollBar1.Enabled = false;
+            darkScrollBar1.Location = new System.Drawing.Point(265, 25);
+            darkScrollBar1.Maximum = 5;
+            darkScrollBar1.Minimum = 1;
+            darkScrollBar1.Name = "darkScrollBar1";
+            darkScrollBar1.Size = new System.Drawing.Size(15, 425);
+            darkScrollBar1.TabIndex = 1;
+            darkScrollBar1.Text = "darkScrollBar1";
             // 
             // DockProperties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pnlMain);
-            this.Controls.Add(this.darkScrollBar1);
-            this.DefaultDockArea = DarkUI.Docking.DarkDockArea.Right;
-            this.DockText = "Properties";
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = global::Example.Icons.properties_16xLG;
-            this.Name = "DockProperties";
-            this.SerializationKey = "DockProperties";
-            this.Size = new System.Drawing.Size(280, 450);
-            this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(pnlMain);
+            Controls.Add(darkScrollBar1);
+            DefaultDockArea = DarkDockArea.Right;
+            DockText = "Properties";
+            Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            Icon = Icons.properties_16xLG;
+            Name = "DockProperties";
+            SerializationKey = "DockProperties";
+            Size = new System.Drawing.Size(280, 450);
+            pnlMain.ResumeLayout(false);
+            pnlMain.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -261,5 +342,12 @@ namespace Example
         private System.Windows.Forms.Panel panel3;
         private DarkUI.Controls.DarkTitle darkTitle3;
         private DarkUI.Controls.DarkDropdownList cmbList;
+        private System.Windows.Forms.Panel panel4;
+        private DarkUI.Controls.DarkButton btnShowSuccess;
+        private DarkUI.Controls.DarkButton btnShowInfo;
+        private DarkUI.Controls.DarkButton btnShowError;
+        private DarkUI.Controls.DarkButton btnShowWarning;
+        private DarkUI.Controls.DarkTitle darkTitle4;
+        private DarkUI.Controls.DarkButton btnCloseAll;
     }
 }

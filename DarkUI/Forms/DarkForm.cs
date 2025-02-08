@@ -13,7 +13,7 @@ namespace DarkUI.Forms
     {
         #region Field Region
 
-        private bool _flatBorder;
+        private bool _flatBorder, _allowResize = true, _allowMoving = true;
         private const int _borderWidth = 2;
         private const int resizeAreaSize = 10;
         private Size _formSize;
@@ -38,6 +38,39 @@ namespace DarkUI.Forms
             set
             {
                 _flatBorder = value;
+                Invalidate();
+            }
+        }
+
+        [Category("Appearance")]
+        [Description("Determines whether the form can be resized by the user.")]
+        [DefaultValue(true)]
+        public bool AllowResize
+        {
+            get => _allowResize;
+            set
+            {
+                _allowResize = value;
+
+                if (value)
+                    FormBorderStyle = FormBorderStyle.Sizable;
+                else
+                    FormBorderStyle = FormBorderStyle.FixedSingle;
+
+                Invalidate();
+            }
+        }
+
+        [Category("Appearance")]
+        [Description("Determines whether the form can be moved by the user.")]
+        [DefaultValue(true)]
+        public bool AllowMoving
+        {
+            get => _allowMoving;
+            set
+            {
+                _allowMoving = value;
+
                 Invalidate();
             }
         }
@@ -97,6 +130,9 @@ namespace DarkUI.Forms
 
         private void Resize_Form(object sender, EventArgs e)
         {
+            if(!_allowResize)
+                return;
+
             _formSize = ClientSize;
 
             switch (this.WindowState)
@@ -147,7 +183,7 @@ namespace DarkUI.Forms
 
         public void Drag(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left && AllowMoving)
             {
                 ReleaseCapture();
                 _ = SendMessage(Handle, 0x112, 0xf012, 0);

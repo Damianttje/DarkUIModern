@@ -26,7 +26,9 @@ namespace DarkUI.Controls
 
             form.Load += DarkDefaultTitleBar_Load;
 
-            darkToolStrip1.MouseDown += _form.Drag;
+            if(_form.AllowMoving)
+                darkToolStrip1.MouseDown += _form.Drag;
+
             btnClose.Click += _form.Close_Click;
 
             if (titleBarStyle == DarkTitleBarStyle.Standard)

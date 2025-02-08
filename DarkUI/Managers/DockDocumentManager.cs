@@ -1,10 +1,11 @@
-﻿using DarkUI.Forms;
+﻿using DarkUI.Docking;
+using DarkUI.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace DarkUI.Docking
+namespace DarkUI.Managers
 {
     internal static class DockDocumentManager
     {
@@ -15,7 +16,7 @@ namespace DarkUI.Docking
         {
             foreach (var form in _darkHostForms.Where(f => f != null && f.IsDisposed == false))
             {
-                DarkDockPanel? dockPanel = null;
+                DarkDockPanel dockPanel = null;
 
                 for (var i = 0; i < form.Controls.Count; i++)
                 {
@@ -31,7 +32,7 @@ namespace DarkUI.Docking
                     continue;
                 }
 
-                if (dockPanel.ClientRectangle.Contains(dockPanel.PointToClient(System.Windows.Forms.Cursor.Position)))
+                if (dockPanel.ClientRectangle.Contains(dockPanel.PointToClient(Cursor.Position)))
                 {
                     dockPanel.AddContent(content);
                     return;
