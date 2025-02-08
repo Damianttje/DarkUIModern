@@ -4,6 +4,13 @@
 Fork of the [DarkUI](https://github.com/RobinPerris/DarkUI) library originally created by Robin Perris who sadly passed away.
 This fork is primarily for personal changes and needs, but if you find any changes that you like to use, feel free to use / modify this.
 
+### Future plans
+- DarkGridView (images and text in row/column grid)
+- DarkToast (toats notifications)
+- DarkSplshScreen (a splash screen system that can be used to show loading progress)
+
+[Nuget](https://www.nuget.org/packages/DarkUI.Refit)
+
 ## DarkUI
 Dark themed control and docking library for .NET WinForms.
 
@@ -37,6 +44,12 @@ Important: `FormBorderStyle` needs to be anything but `None`. The TitleBar will 
 - This features can be turned on or off from the Desginer property `ShowDetails`
 
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkListView_Details.png" />
+
+### Toasts
+- Toast notifications can be shown on every corener of the screen and in 4 variations (Info, Success, Warning, Error)
+- The static class `DarkToastManager` is used to call the Toasts and the `DarkToastOptions` class is used to configure the default toast settings (position, animation speed, show duration)
+
+<img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/Toast.png" />
 
 ### Demo
 - The demo has been updated to showcase the new features (undocking documents, title bar)
