@@ -45,6 +45,12 @@ Important: `FormBorderStyle` needs to be anything but `None`. The TitleBar will 
 
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/DarkListView_Details.png" />
 
+### Toasts
+- Toast notifications can be shown on every corener of the screen and in 4 variations (Info, Success, Warning, Error)
+- The static class `DarkToastManager` is used to call the Toasts and the `DarkToastOptions` class is used to configure the default toast settings (position, animation speed, show duration)
+
+<img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/Toast.png" />
+
 ### Demo
 - The demo has been updated to showcase the new features (undocking documents, title bar)
 
