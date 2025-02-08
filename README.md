@@ -6,7 +6,6 @@ This fork is primarily for personal changes and needs, but if you find any chang
 
 ### Future plans
 - DarkGridView (images and text in row/column grid)
-- DarkToast (toats notifications)
 - DarkSplshScreen (a splash screen system that can be used to show loading progress)
 
 [Nuget](https://www.nuget.org/packages/DarkUI.Refit)
