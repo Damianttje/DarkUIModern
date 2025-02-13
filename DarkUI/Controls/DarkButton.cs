@@ -1,4 +1,5 @@
 ﻿using DarkUI.Config;
+using DarkUI.Data.Enums;
 using System;
 using System.ComponentModel;
 using System.Drawing;

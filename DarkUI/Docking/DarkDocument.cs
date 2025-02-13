@@ -1,4 +1,5 @@
 ﻿using DarkUI.Config;
+using DarkUI.Data.Enums.Docking;
 using System.ComponentModel;
 
 namespace DarkUI.Docking

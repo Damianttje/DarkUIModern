@@ -1,4 +1,4 @@
-﻿namespace DarkUI.Controls
+﻿namespace DarkUI.Data.Enums
 {
     public enum DarkContentAlignment
     {

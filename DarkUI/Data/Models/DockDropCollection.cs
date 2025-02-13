@@ -1,4 +1,7 @@
-﻿namespace DarkUI.Docking
+﻿using DarkUI.Data.Enums.Docking;
+using DarkUI.Docking;
+
+namespace DarkUI.Data.Models
 {
     internal class DockDropCollection
     {

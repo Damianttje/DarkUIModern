@@ -1,4 +1,5 @@
 ﻿using DarkUI.Controls;
+using DarkUI.Data.Enums;
 
 namespace DarkUI.Forms
 {

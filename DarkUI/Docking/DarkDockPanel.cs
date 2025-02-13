@@ -1,4 +1,6 @@
 ﻿using DarkUI.Config;
+using DarkUI.Data.Enums.Docking;
+using DarkUI.Data.Models;
 using DarkUI.Managers;
 using DarkUI.Win32;
 using System;

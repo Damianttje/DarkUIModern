@@ -1,4 +1,4 @@
-﻿namespace DarkUI.Forms
+﻿namespace DarkUI.Data.Enums
 {
     public enum DarkDialogButton
     {

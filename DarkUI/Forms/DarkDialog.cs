@@ -1,4 +1,5 @@
 ﻿using DarkUI.Controls;
+using DarkUI.Data.Enums;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;

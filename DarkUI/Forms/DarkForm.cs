@@ -1,5 +1,6 @@
 ﻿using DarkUI.Config;
 using DarkUI.Controls;
+using DarkUI.Data.Enums;
 using DarkUI.Win32;
 using System;
 using System.ComponentModel;

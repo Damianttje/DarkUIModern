@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using DarkUI.Data.Enums.Docking;
+using System.Drawing;
 
 namespace DarkUI.Docking
 {

@@ -1,4 +1,4 @@
-﻿namespace DarkUI.Docking
+﻿namespace DarkUI.Data.Enums.Docking
 {
     public enum DarkSplitterType
     {

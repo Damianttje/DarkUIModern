@@ -1,4 +1,6 @@
-﻿namespace DarkUI.Forms
+﻿using DarkUI.Data.Enums;
+
+namespace DarkUI.Forms
 {
     partial class DarkHostForm
     {
@@ -49,7 +51,7 @@
             Controls.Add(dockPanel);
             Name = "DarkHostForm";
             Text = "DarkHostForm";
-            TitleBarStyle = DarkUI.Controls.DarkTitleBarStyle.ToolWindow;
+            TitleBarStyle = DarkTitleBarStyle.ToolWindow;
             FormClosing += DarkHostForm_FormClosing;
             ResumeLayout(false);
         }

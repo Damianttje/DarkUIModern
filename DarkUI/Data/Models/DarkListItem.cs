@@ -2,7 +2,7 @@
 using System;
 using System.Drawing;
 
-namespace DarkUI.Controls
+namespace DarkUI.Data.Models
 {
     public class DarkListItem
     {
@@ -31,7 +31,7 @@ namespace DarkUI.Controls
             }
         }
 
-        public string? Details { get; set; } 
+        public string Details { get; set; }
 
         public Rectangle Area { get; set; }
 

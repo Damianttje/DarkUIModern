@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using DarkUI.Data.Enums.Docking;
+using System.Collections.Generic;
 using System.Drawing;
 
-namespace DarkUI.Docking
+namespace DarkUI.Data.Models
 {
     public class DockRegionState
     {

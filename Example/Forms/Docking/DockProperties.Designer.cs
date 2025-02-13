@@ -1,5 +1,5 @@
 ﻿using DarkUI.Config;
-using DarkUI.Docking;
+using DarkUI.Data.Enums.Docking;
 
 namespace Example
 {

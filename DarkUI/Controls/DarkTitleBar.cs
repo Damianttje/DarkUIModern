@@ -1,4 +1,5 @@
-﻿using DarkUI.Forms;
+﻿using DarkUI.Data.Enums;
+using DarkUI.Forms;
 using System;
 using System.Windows.Forms;
 

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace DarkUI.Controls
+namespace DarkUI.Data.Models
 {
     public class DarkDropdownItem
     {

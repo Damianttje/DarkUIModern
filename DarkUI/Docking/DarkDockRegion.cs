@@ -1,4 +1,5 @@
 ﻿using DarkUI.Config;
+using DarkUI.Data.Enums.Docking;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
