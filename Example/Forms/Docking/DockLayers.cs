@@ -1,5 +1,6 @@
 ﻿using System;
 using DarkUI.Controls;
+using DarkUI.Data.Models;
 using DarkUI.Docking;
 
 namespace Example
