@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DarkUI.Controls
+namespace DarkUI.Data.Models
 {
     public class ScrollValueEventArgs : EventArgs
     {
