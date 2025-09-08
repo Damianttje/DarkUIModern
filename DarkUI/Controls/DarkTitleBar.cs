@@ -62,7 +62,7 @@ namespace DarkUI.Controls
             darkToolStrip1.AutoSize = false;
             darkToolStrip1.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
             darkToolStrip1.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
-            darkToolStrip1.Items.AddRange(lbTitle, btnClose, btnMaximize, btnMinimize );
+            darkToolStrip1.Items.AddRange(new ToolStripItem[] { lbTitle, btnClose, btnMaximize, btnMinimize });
             darkToolStrip1.Location = new System.Drawing.Point(0, 0);
             darkToolStrip1.Name = "darkToolStrip1";
             darkToolStrip1.Padding = new System.Windows.Forms.Padding(5, 0, 1, 0);

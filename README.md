@@ -1,8 +1,12 @@
 <img src="https://github.com/CuvinStefanCristian/DarkUI-Refit/blob/master/Resources/MainFormScreenshot.png" />
 
-## DarkUI-Refit
-Fork of the [DarkUI](https://github.com/RobinPerris/DarkUI) library originally created by Robin Perris who sadly passed away.
+## DarkUIModern
+Fork of [DarkUI-Refit](https://github.com/CuvinStefanCristian/DarkUI-Refit) which is a fork of the [DarkUI](https://github.com/RobinPerris/DarkUI) library originally created by Robin Perris who sadly passed away.
 This fork is primarily for personal changes and needs, but if you find any changes that you like to use, feel free to use / modify this.
+
+### Modern .NET Support
+This project now supports .NET 8.0:
+- **.NET 8.0-windows** - 
 
 ### Future plans
 - DarkGridView (images and text in row/column grid)
